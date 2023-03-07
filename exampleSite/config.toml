@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-theme = "hugo-theme-hello-friend"
+# theme = "hugo-theme-hello-friend-blue"
 paginate = 5
 
 [params]

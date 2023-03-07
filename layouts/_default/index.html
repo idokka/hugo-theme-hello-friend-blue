@@ -29,6 +29,14 @@
           {{ end }}
         {{ end }}
 
+      {{ if .Params.tags }}
+        <span class="post-tags">
+          {{ range .Params.tags }}
+            <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">#{{ . }}</a>&nbsp;
+          {{ end }}
+        </span>
+      {{ end }}
+
         {{ with .Params.Author }}
           <span class="post-author">— {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}</span>
         {{ end }}
@@ -37,14 +45,6 @@
           <span class="post-read-time">— {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}</span>
         {{ end }}
       </div>
-
-      {{ if .Params.tags }}
-        <span class="post-tags">
-          {{ range .Params.tags }}
-            <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">#{{ . }}</a>&nbsp;
-          {{ end }}
-        </span>
-      {{ end }}
 
       {{ if .Params.Cover }}
         {{ partial "postcover.html" . }}

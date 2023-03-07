@@ -34,6 +34,21 @@
   cursor: pointer;
 }
 
+.social-icons {
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: -5px;
+    
+    &--desktop {
+      @media ($phone) {
+        display: none;
+      }
+    }
+
+}
+
 .theme-toggler {
   fill: currentColor;
 }

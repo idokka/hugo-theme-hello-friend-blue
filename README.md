@@ -2,12 +2,11 @@
 
 ![Hello Friend](https://github.com/panr/hugo-theme-hello-friend/blob/master/images/screenshot.png?raw=true)
 
-### DEMO - https://hugo-hello-friend.now.sh/ <a id="demo" />
+### DEMO - https://hugo-theme-hello-friend-blue.vercel.app/ <a id="demo" />
 
 ---
 
 - [Hello Friend](#hello-friend)
-  - [DEMO - https://hugo-hello-friend.now.sh/](#demo)
   - [Features](#features)
       - [Built-in shortcodes](#built-in-shortcodes)
       - [Code highlighting](#code-highlighting)

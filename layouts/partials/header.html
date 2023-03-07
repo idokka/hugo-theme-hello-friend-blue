@@ -2,6 +2,11 @@
   <span class="header__inner">
     {{ partial "logo.html" . }}
     <span class="header__right">
+      {{- range .Site.Params.social }}
+        <span class="social-icons social-icons--desktop">
+	  {{ partial "social-icons.html" . }}
+	</span>
+      {{- end }}
       {{ if len $.Site.Menus }}
         {{ partial "menu.html" . }}
         <span class="menu-trigger">

@@ -33,6 +33,9 @@
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
+    {{- range $.Site.Params.social }}
+      <li>{{ partial "social-icons.html" . }}</li>
+    {{- end }}
     {{ range $.Site.Menus.main }}
       {{ if not .HasChildren }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
