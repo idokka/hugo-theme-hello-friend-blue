@@ -92,9 +92,9 @@ Some enhancements have been made to Hugo's [internal RSS][internal-rss] generati
 
 **A page's cover image now appears at the top of its feed display**. This image is set manually using [the cover params](#how-to-add-a-cover). If unset, the RSS generator searches for the first image file in the page bundle whose name includes 'featured', 'cover', or 'thumbnail'.
 
-**You can optionally display the full page content in your RSS feed** (default is Description or Summary data from Front Matter). Set `rssFullText: true` in your `config.yaml` file to enable this option.
+**You can optionally display the full page content in your RSS feed** (default is Description or Summary data from Front Matter). Set `rssFullText: true` in your `hugo.yaml` file to enable this option.
 
-**You can choose a site image to be displayed when searching for your RSS feed.** Set `rssImage: "image/url/here"` in your `config.yaml` file to enable this option.
+**You can choose a site image to be displayed when searching for your RSS feed.** Set `rssImage: 'image/url/here'` in your `hugo.yaml` file to enable this option.
 
 ## How to start
 
@@ -124,7 +124,7 @@ and in your config file add:
 ```yaml
 module
   # This is needed when you fetch the theme as a submodule to your repo.
-  # replacements: "github.com/idokka/hugo-theme-hello-friend-blue -> themes/hello-friend-blue"
+  # replacements: 'github.com/idokka/hugo-theme-hello-friend-blue -> themes/hello-friend-blue'
   imports:
     path: 'github.com/idokka/hugo-theme-hello-friend-blue.git'
 ```
@@ -137,7 +137,7 @@ Keep in mind that the theme by default won't show up in the `themes` directory. 
 Error: module "hello-friend-blue" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
 ```
 
-then please try to remove `theme: "hello-friend-blue"` from your config file.
+then please try to remove `theme: 'hello-friend-blue'` from your config file.
 
 ### Install theme locally
 
@@ -245,18 +245,18 @@ to `hugo.yaml` file in your Hugo root directory and change params fields.
 
 Adding a cover image to your post is simple and there are two options when you edit your `index.md` file in `content/posts/blog-entry-xy/index.md`:
 
-* Use `cover: "/path/to/absolute/img.jpg"` to link an absolute image
+* Use `cover: '/path/to/absolute/img.jpg'` to link an absolute image
   * Resulting in `https://www.yourpage.com/path/to/absolute/img.jpg`
-* Use `cover: "img.jpg"` and `useRelativeCover: true` to link the image relative to the blog post folder
+* Use `cover: 'img.jpg'` and `useRelativeCover: true` to link the image relative to the blog post folder
   * Resulting in `https://www.yourpage.com/posts/blog-entry-xy/img.jpg`
-* Use `coverAlt: "description of image"` to add custom alt text to the cover image (defaults to post or page title as alt text)
-* Use `coverCaption: "Image Credit to [Barry Bluejeans](https://unsplash.com/)"` to add a caption for the cover image.
+* Use `coverAlt: 'description of image'` to add custom alt text to the cover image (defaults to post or page title as alt text)
+* Use `coverCaption: 'Image Credit to [Barry Bluejeans](https://unsplash.com/)'` to add a caption for the cover image.
 
 ## How to display the Last Modified Date in your posts <a id="display-the-last-modified-date" />
 
-Add `lastModDisplay: "[your display text]"` to `config.yaml` to enable last modified date on your posts. Note - an empty string value `""` does not display anything.
+Add `lastModDisplay: '[your display text]'` to `hugo.yaml` to enable last modified date on your posts. Note - an empty string value `""` does not display anything.
 
-Example: `lastModDisplay: "Modified:"` --> "Modified: Jan 01, 0001"
+Example: `lastModDisplay: 'Modified:'` --> "Modified: Jan 01, 0001"
 
 :octocat: Hugo's `enableGitInfo` option is a nice complement to this feature.
 
