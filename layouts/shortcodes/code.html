@@ -1,14 +1,34 @@
-{{ $id := delimit (shuffle (seq 1 9)) "" }}
+{{ $defaultId := delimit (shuffle (seq 1 9)) "" }}
 
-{{ if .Get "language" }}
+{{ $id := .Get `id` | default $defaultId }}
+{{ $content := .Inner }}
+{{ $title := .Get `title` }}
+{{ $language := .Get `language` }}
+{{ $isCollapsed := .Get `isCollapsed` }}
+{{ $expand := .Get `.expand` | default "△" }}
+{{ $collapse := .Get `collapse` | default "▽" }}
+
+{{ if .Page.Resources.GetMatch (.Get 0) }}
+  {{ with .Page.Resources.GetMatch (.Get 0) }}
+    {{ $id = .Params.id | default $defaultId }}
+    {{ $title = .Title }}
+    {{ $content = .Content }}
+    {{ $language = $.Get 1 | default .Params.language }}
+    {{ $isCollapsed = .Params.isCollapsed }}
+    {{ $expand = .Params.expand | default "△" }}
+    {{ $collapse = .Params.collapse | default "▽" }}
+  {{ end }}
+{{ end }}
+
+{{ if $language }}
   <div class="collapsable-code">
-    <input id="{{ .Get "id" | default $id }}" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "true" ) -}} checked {{- end }} />
-    <label for="{{ .Get "id" | default $id }}">
-      <span class="collapsable-code__language">{{ .Get "language" }}</span>
-      {{ if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end }}
-      <span class="collapsable-code__toggle" data-label-expand="{{ .Get "expand" | default "△" }}" data-label-collapse="{{ .Get "collapse" | default "▽" }}"></span>
+    <input id="{{ $id }}" type="checkbox" {{ if eq $isCollapsed true }} checked {{ end }} />
+    <label for="{{ $id }}">
+      <span class="collapsable-code__language">{{ $language }}</span>
+      {{ if $title }}<span class="collapsable-code__title">{{ $title | markdownify }}</span>{{ end }}
+      <span class="collapsable-code__toggle" data-label-expand="{{ $expand }}" data-label-collapse="{{ $collapse }}"></span>
     </label>
-    <pre {{ if .Get "language" }}class="language-{{ .Get "language" }}" {{ end }}><code>{{ .Inner | string }}</code></pre>
+    <pre class="language-{{ $language }}"><code>{{ $content | string | strings.TrimSpace }}</code></pre>
   </div>
 {{ else }}
   {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}
