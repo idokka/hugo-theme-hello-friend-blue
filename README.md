@@ -1,6 +1,6 @@
 # Hello Friend
 
-![Hello Friend](https://github.com/panr/hugo-theme-hello-friend/blob/master/images/screenshot.png?raw=true)
+![Hello Friend (Blue version)][screenshot]
 
 ### DEMO - https://hugo-theme-hello-friend-blue.vercel.app/ <a id="demo" />
 
@@ -14,8 +14,8 @@
   - [How to start](#how-to-start)
   - [How to run your site](#how-to-run-your-site)
   - [How to configure](#how-to-configure)
-  - [How to add a cover image to your posts](#how-to-add-a-cover-image-to-your-posts)
-  - [How to display the Last Modified Date in your posts](#how-to-display-the-last-modified-date-in-your-posts)
+  - [How to add a cover image to your posts](#how-to-add-a-cover)
+  - [How to display the Last Modified Date in your posts](#display-the-last-modified-date)
   - [How to hide "Read more" button](#how-to-hide-read-more-button)
   - [Add-ons](#add-ons)
   - [How to edit the theme](#how-to-edit)
@@ -27,7 +27,7 @@
 ## Features
 
 - **dark/light mode**, depending on your preferences (the theme of your operating system is default, but you can change it)
-- great reading experience thanks to [**Inter font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
+- great reading experience thanks to [**Inter font**][font], made by [Rasmus Andersson][font-about]
 - nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
 - fully responsive
 
@@ -39,7 +39,7 @@
   - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
 - **`imgproc`** Hugo shortcode for image processing, plus additional **`position`** param [ left | center | right ] (optional).
   - eg: `{{< imgproc "img/hello.png" Resize "250x" center />}}`
-  - More detailed info on processing commands at [https://gohugo.io/content-management/image-processing/](https://gohugo.io/content-management/image-processing/)
+  - More detailed info on processing commands at the [documentation](https://gohugo.io/content-management/image-processing/)
 - **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
   - eg:
   ```go
@@ -65,6 +65,14 @@
   }
   {{< /code >}}
   ```
+  - also can be used to import snippet file from page resources, eg:
+  ```go
+  ---
+  resources:
+   - src: snippet.js
+  ---
+  {{< code snippet.js css />}}
+  ```
 
 #### Code highlighting
 
@@ -76,13 +84,13 @@ By default the theme is using PrismJS to color your code syntax. All you need to
 ```
 </pre>
 
-**Supported languages**: bash/shell, css, clike, javascript, apacheconf, actionscript, applescript, c, csharp, cpp, coffeescript, ruby, csp, css-extras, diff, django, docker, elixir, elm, markup-templating, erlang, fsharp, flow, git, go, graphql, less, handlebars, haskell, http, java, json, kotlin, latex, markdown, makefile, objectivec, ocaml, perl, php, php-extras, r, sql, processing, scss, python, jsx, typescript, toml, reason, textile, rust, sass, stylus, scheme, pug, swift, yaml, haml, twig, tsx, vim, visual-basic, wasm.
+Supported languages via [documentation][prismjs-langs].
 
 #### Improved RSS Feed
 
-Some enhancements have been made to Hugo's [internal RSS](https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/_default/rss.xml) generation code.
+Some enhancements have been made to Hugo's [internal RSS][internal-rss] generation code.
 
-**A page's cover image now appears at the top of its feed display**. This image is set manually using [the cover params](#how-to-add-a-cover-image-to-your-posts). If unset, the RSS generator searches for the first image file in the page bundle whose name includes 'featured', 'cover', or 'thumbnail'.
+**A page's cover image now appears at the top of its feed display**. This image is set manually using [the cover params](#how-to-add-a-cover). If unset, the RSS generator searches for the first image file in the page bundle whose name includes 'featured', 'cover', or 'thumbnail'.
 
 **You can optionally display the full page content in your RSS feed** (default is Description or Summary data from Front Matter). Set `rssFullText = true` in your `config.toml` file to enable this option.
 
@@ -90,7 +98,7 @@ Some enhancements have been made to Hugo's [internal RSS](https://github.com/goh
 
 ## How to start
 
-You can download the theme manually by going to [https://github.com/panr/hugo-theme-hello-friend.git](https://github.com/panr/hugo-theme-hello-friend.git) and pasting it to `themes/hello-friend` in your root directory.
+You can download the theme manually by going to [repository][repo] and pasting it to `themes/hello-friend-blue` in your root directory.
 
 You can also choose **one of the 3 possibilities** to install the theme:
 
@@ -98,7 +106,7 @@ You can also choose **one of the 3 possibilities** to install the theme:
 2. as a standalone local directory
 3. as a git submodule
 
-⚠️ **The theme needs at least Hugo **Extended** v0.90.x**.
+⚠️ **The theme needs at least Hugo **Extended** v0.147.x**.
 
 ### Install theme as Hugo Module
 
@@ -108,7 +116,7 @@ You can also choose **one of the 3 possibilities** to install the theme:
 # you fetch the theme module.
 #
 # hugo mod init [your website/module name]
-hugo mod get github.com/panr/hugo-theme-hello-friend
+hugo mod get github.com/idokka/hugo-theme-hello-friend-blue.git
 ```
 
 and in your config file add:
@@ -116,43 +124,43 @@ and in your config file add:
 ```toml
 [module]
   # this is needed when you fetch the theme as a submodule to your repo.
-  # replacements = "github.com/panr/hugo-theme-hello-friend -> themes/hello-friend"
+  # replacements = "github.com/idokka/hugo-theme-hello-friend-blue -> themes/hello-friend-blue"
 [[module.imports]]
-  path = 'github.com/panr/hugo-theme-hello-friend'
+  path = 'github.com/idokka/hugo-theme-hello-friend-blue.git'
 ```
 
-Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation](https://gohugo.io/hugo-modules/).
+Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation][hugo-modules].
 
 ⚠️ If you encounter any issues with:
 
 ```bash
-Error: module "hello-friend" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
+Error: module "hello-friend-blue" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
 ```
 
-then please try to remove `theme = "hello-friend"` from your config file.
+then please try to remove `theme = "hello-friend-blue"` from your config file.
 
 ### Install theme locally
 
 ```bash
-git clone https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
+git clone https://github.com/idokka/hugo-theme-hello-friend-blue.git themes/hello-friend-blue
 ```
 
-This will clone the repository directly to the `themes/hello-friend` directory.
+This will clone the repository directly to the `themes/hello-friend-blue` directory.
 
 ### Install theme as a submodule
 
 ```bash
-git submodule add -f https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
+git submodule add -f https://github.com/idokka/hugo-theme-hello-friend-blue.git themes/hello-friend-blue
 ```
 
-This will install the repository as a sumbodule in the `themes/hello-friend` directory.
+This will install the repository as a sumbodule in the `themes/hello-friend-blue` directory.
 
 ## How to run your site
 
 From your Hugo root directory run:
 
 ```
-hugo server -t hello-friend
+hugo server -t hello-friend-blue
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -234,7 +242,7 @@ to `config.toml` file in your Hugo root directory and change params fields. In c
 
 **NOTE:** Please keep in mind that currently main menu doesn't support nesting.
 
-## How to add a cover image to your posts
+## How to add a cover image to your posts <a id="how-to-add-a-cover" />
 
 Adding a cover image to your post is simple and there are two options when you edit your `index.md` file in `content/posts/blog-entry-xy/index.md`:
 
@@ -245,7 +253,7 @@ Adding a cover image to your post is simple and there are two options when you e
 * Use `coverAlt = "description of image"` to add custom alt text to the cover image (defaults to post or page title as alt text)
 * Use `coverCaption = "Image Credit to [Barry Bluejeans](https://unsplash.com/)"` to add a caption for the cover image.
 
-## How to display the Last Modified Date in your posts
+## How to display the Last Modified Date in your posts <a id="display-the-last-modified-date" />
 
 Add `lastModDisplay = "[your display text]"` to `config.toml` to enable last modified date on your posts. Note - an empty string value `""` does not display anything.
 
@@ -259,11 +267,17 @@ In a post's front matter you have to add `hideReadMore` param set to `true`. Thi
 
 ## Add-ons
 
-- **Archive** — Theme has built-in `archive` page for main content (see `contentTypeName` variable in config). If you need archive on your blog just copy https://github.com/panr/hugo-theme-hello-friend/blob/master/exampleSite/content/archive.md to your `content` dir. If you need multilangual archives, duplicate `content/archive.md` and add `.Lang` variable, eg: `content/archive.pl.md` (remember to change `url` in duplicated file).
-- **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.
-- **Prepended `<head>`** — if you need to add something inside `<head>` element, and before any of the theme's `<script>` and `<link>` tags are declared, please take a look at `layouts/partial/prepended_head.html` https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/prepended_head.html
-- **Extended `<head>`** — if you need to add something inside `<head>` element, after all of all of the theme's `<script>` and `<link>` tags are declared, please take a look at `layouts/partial/extended_head.html` https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_head.html
-- **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at `layouts/partial/extended_footer.html` https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_footer.html
+- **Archive** — Theme has built-in `archive` page for main content (see `contentTypeName` variable in config). If you need archive on your blog just copy [archive.md][archive.md] to your `content` dir. If you need multilangual archives, duplicate `content/archive.md` and add `.Lang` variable, eg: `content/archive.pl.md` (remember to change `url` in duplicated file).
+- **Comments** — for adding comments to your blog posts please take a look at [`layouts/partials/comments.html`][comments.html].
+- **Prepended `<head>`** — if you need to add something inside `<head>` element, and before any of the theme's `<script>` and `<link>` tags are declared, please take a look at [`layouts/partial/prepended_head.html`][prepended_head.html]
+- **Extended `<head>`** — if you need to add something inside `<head>` element, after all of all of the theme's `<script>` and `<link>` tags are declared, please take a look at [`layouts/partial/extended_head.html`][extended_head.html]
+- **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at [`layouts/partial/extended_footer.html`][extended_footer.html]
+
+[archive.md]: https://github.com/panr/hugo-theme-hello-friend/blob/master/exampleSite/content/archive.md
+[comments.html]: https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html
+[prepended_head.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/prepended_head.html
+[extended_head.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_head.html
+[extended_footer.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_footer.html
 
 ## How to edit the theme <a id="how-to-edit" />
 
@@ -273,7 +287,10 @@ If you have the theme files in the theme directory, then you can directly edit a
 
 ## Found a bug? <a id="bug" />
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-hello-friend/issues) or create a new [Pull Request](https://github.com/panr/hugo-theme-hello-friend/pulls) to fix the issue.
+If you spot any bugs, please use [Issue Tracker][issues] or create a new [Pull Request][pulls] to fix the issue.
+
+[issues]: https://github.com/idokka/hugo-theme-hello-friend-blue/issues
+[pulls]: https://github.com/idokka/hugo-theme-hello-friend-blue/pulls
 
 ## New cool idea or feature? <a id="feature" />
 
@@ -294,10 +311,22 @@ Sounds OK? Cool, let's rock! 🤘
 
 ## `Hello Friend` theme user?
 
-I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-hello-friend/blob/master/USERS.md)! 🤗
+I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list][users]! 🤗
 
 ## License
 
-Copyright © 2019-2022 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2022 Radosław Kozieł 🇵🇱 ([@panr](https://twitter.com/panr))
+Copyright © 2023-2025 Oleksii Myronenko 🇺🇦 ([@idokka](https://www.linkedin.com/in/omyronenko))
 
-The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-hello-friend/blob/master/LICENSE.md) for additional licensing information.
+The theme is released under the [MIT License][license].
+
+---
+[screenshot]: https://github.com/panr/hugo-theme-hello-friend/blob/master/images/screenshot.png?raw=true
+[font]: https://rsms.me/inter/
+[font-about]: https://rsms.me/about/
+[prismjs-langs]: https://prismjs.com/#supported-languages
+[internal-rss]: https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/_default/rss.xml
+[repo]: https://github.com/idokka/hugo-theme-hello-friend-blue
+[hugo-modules]: https://gohugo.io/hugo-modules
+[users]: https://github.com/panr/hugo-theme-hello-friend/blob/master/USERS.md
+[license]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/LICENSE.md
