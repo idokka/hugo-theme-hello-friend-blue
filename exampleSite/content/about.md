@@ -7,11 +7,11 @@ author: "Radek, Oleksii"
 
 # Updates 😊
 
-I like this theme and at the point of my blog creation I've collected all unmerged forks and add my own changes.
+I like this theme and at the point of my [blog][blog] creation I've collected all unmerged forks and add my own changes.
 
 Hope you will enjoy it.
 
-My personal big thanks to Radek!
+My personal big thanks to Radek!  
 🇺🇦 🤝 🇵🇱
 
 # Hi there
@@ -25,7 +25,13 @@ This theme is pretty basic and covers all of the essentials. All you have to do 
 The theme includes:
 
 - **light/dark mode**, depending on your preferences
-- great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
-- nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
+- great reading experience thanks to [**Inter UI font**][font], made by [Rasmus Andersson][rsms]
+- nice code highlighting thanks to [**PrismJS**][prismjs]
 
 So, there you have it... enjoy!
+
+---
+[font]: https://rsms.me/inter/
+[rsms]: https://rsms.me/about/
+[prismjs]: https://prismjs.com
+[blog]: https://pimpl.dev
