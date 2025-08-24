@@ -2,6 +2,12 @@
 title: "Showcase"
 date: "2019-01-18"
 author: "Lorem Ipsum"
+rosources:
+  - src: snippet.js
+    params:
+      title: code from snippet file
+      isCollapsed: true
+
 ---
 
 ## Header 2
@@ -38,26 +44,9 @@ pre {
 }
 ```
 
-```js
-// JS code
+{{< code snippet.js js />}}
 
-const menuTrigger = document.querySelector('.menu-trigger')
-const menu = document.querySelector('.menu')
-const mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth')
-const isMobile = () => window.matchMedia(mobileQuery).matches
-const isMobileMenu = () => {
-  menuTrigger.classList.toggle('hidden', !isMobile())
-  menu.classList.toggle('hidden', isMobile())
-}
-
-isMobileMenu()
-
-menuTrigger.addEventListener('click', () => menu.classList.toggle('hidden'))
-
-window.addEventListener('resize', isMobileMenu)
-```
-
-```html
+{{< code language="html" title="from code snippet" >}}
 <!-- HTML code -->
 
 <section id="main">
@@ -68,7 +57,7 @@ window.addEventListener('resize', isMobileMenu)
     {{ end }}
   </div>
 </section>
-```
+{{< /code >}}
 
 #### Header 4
 
