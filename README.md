@@ -201,6 +201,11 @@ params:
   # (default is Description or Summary metadata in the front matter)
   # rssFullText: true
 
+  # All supported icons you can find in layouts\partials\svg.html
+  social:
+  - name: 'github'
+    url: 'https://github.com/idokka/hugo-theme-hello-friend-blue'
+
 languages:
   en:
     title: 'Your site title'

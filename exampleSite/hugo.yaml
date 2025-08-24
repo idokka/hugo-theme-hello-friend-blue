@@ -8,6 +8,10 @@ params:
   showMenuItems: 2
   showReadingTime: false
 
+  social:
+  - name: 'github'
+    url: 'https://github.com/idokka/hugo-theme-hello-friend-blue'
+
 languages:
   en:
     title: 'Hello Friend'
