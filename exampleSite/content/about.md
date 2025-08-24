@@ -1,8 +1,18 @@
-+++
-title = "About"
-date = "2019-01-25"
-author = "Radek"
-+++
+---
+title: "About"
+date: 2019-01-25
+modified: 2025-08-24
+author: "Radek, Oleksii"
+---
+
+# Updates 😊
+
+I like this theme and at the point of my blog creation I've collected all unmerged forks and add my own changes.
+
+Hope you will enjoy it.
+
+My personal big thanks to Radek!
+🇺🇦 🤝 🇵🇱
 
 # Hi there
 

@@ -4,8 +4,8 @@ date: "2019-01-18"
 author: "Lorem Ipsum"
 resources:
   - src: "snippet.js"
+    title: code from snippet file
     params:
-      title: code from snippet file
       isCollapsed: true
 
 ---
