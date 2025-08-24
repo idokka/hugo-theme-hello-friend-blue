@@ -321,7 +321,7 @@ Copyright © 2023-2025 Oleksii Myronenko 🇺🇦 ([@idokka](https://www.linkedi
 The theme is released under the [MIT License][license].
 
 ---
-[screenshot]: https://github.com/panr/hugo-theme-hello-friend/blob/master/images/screenshot.png?raw=true
+[screenshot]: https://raw.githubusercontent.com/idokka/hugo-theme-hello-friend-blue/refs/heads/master/images/screenshot.png
 [font]: https://rsms.me/inter/
 [font-about]: https://rsms.me/about/
 [prismjs-langs]: https://prismjs.com/#supported-languages
