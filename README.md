@@ -170,12 +170,13 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 The theme doesn't require any advanced configuration. Just copy:
 
 ```yaml
-baseUrl: /
-languageCode: en-us
+baseUrl: '/'
+languageCode: 'en-us'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
-theme: hello-friend-blue
-copyright: 'panr/idokka'
+theme: 'hello-friend-blue'
+# Override to place own footer string
+# copyright: 'panr/idokka'
 
 # pagination:
 #   pagerSize: 5
@@ -186,9 +187,9 @@ copyright: 'panr/idokka'
 
 params:
   # dir name of your blog content (default is `content/posts`)
-  contentTypeName: posts
+  contentTypeName: 'posts'
   # OS theme is default when not provided, but you can force it to "light" or "dark"
-  defaultTheme: dark
+  defaultTheme: 'dark'
   # If you set this to 0, only submenu trigger will be visible
   showMenuItems: 2
   # Show reading time in minutes for posts
@@ -202,41 +203,41 @@ params:
 
 languages:
   en:
-    title: Your site title
-    subtitle: Your site subtitle
+    title: 'Your site title'
+    subtitle: 'Your site subtitle'
     keywords: ''
-    menuMore: Show more
-    writtenBy: Written by
-    readMore: Read more
-    readOtherPosts: Read other posts
-    newerPosts: Newer posts
-    olderPosts: Older posts
+    menuMore: 'Show more'
+    writtenBy: 'Written by'
+    readMore: 'Read more'
+    readOtherPosts: 'Read other posts'
+    newerPosts: 'Newer posts'
+    olderPosts: 'Older posts'
     dateFormatSingle: 2006-01-02
     dateFormatList: 2006-01-02
     # Leave empty to disable, enter display text to enable
-    # lastModDisplay: ""
+    # lastModDisplay: 'Modified'
     
     params:
       logo:
-        logoText: hello friend
-        logoHomeLink: /
+        logoText: 'hello friend'
+        logoHomeLink: '/'
     #   or
     #
-    #   path: /img/your-example-logo.svg
-    #   alt: Your example logo alt text
+    #   path: '/img/your-example-logo.svg'
+    #   alt: 'Your example logo alt text'
     
     menu:
       main:
-      - identifier: about
-        name: About
-        url: /about
-      - identifier: showcase
-        name: Showcase
-        url: /showcase
+      - identifier: 'about'
+        name: 'About'
+        url: '/about'
+      - identifier: 'showcase'
+        name: 'Showcase'
+        url: '/showcase'
 
 ```
 
-to `config.yaml` file in your Hugo root directory and change params fields.
+to `hugo.yaml` file in your Hugo root directory and change params fields.
 
 **NOTE:** Please keep in mind that currently main menu doesn't support nesting.
 
