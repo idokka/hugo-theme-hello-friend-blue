@@ -1,12 +1,12 @@
 <footer class="footer">
   <div class="footer__inner">
+    {{ partial "logo.html" . }}
     {{ if $.Site.Copyright }}
       <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
-      {{ else }}
-      {{ partial "logo.html" . }}
+    {{ else }}
       <div class="copyright">
         <span>© {{ now.Year }} Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
-        <span><a href="https://github.com/idokka/hugo-theme-hello-friend-blue" target="_blank">Theme</a> originally made by <a href="https://github.com/panr" target="_blank">panr</a> tuned up by <a href="https://github.com/idokka" target="_blank">dokka</a></span>
+        <span><a href="https://github.com/idokka/hugo-theme-hello-friend-blue" target="_blank">Theme</a> originally made by <a href="https://github.com/panr" target="_blank">panr</a> tuned up by <a href="https://github.com/idokka" target="_blank">idokka</a></span>
       </div>
     {{ end }}
   </div>
