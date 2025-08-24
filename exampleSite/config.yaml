@@ -4,7 +4,7 @@ copyright: 'panr/idokka'
 # theme: hello-friend-blue
 
 params:
-  contentTypeName: posts
+  contentTypeName: post
   defaultTheme: dark
   showMenuItems: 2
   showReadingTime: false
