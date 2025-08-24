@@ -1,6 +1,6 @@
-# Hello Friend
+# Hello Friend (Blue version)
 
-![Hello Friend (Blue version)][screenshot]
+![Hello Friend][screenshot]
 
 ### DEMO - https://hugo-theme-hello-friend-blue.vercel.app/ <a id="demo" />
 
@@ -169,76 +169,67 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 
 The theme doesn't require any advanced configuration. Just copy:
 
-```toml
-baseurl = "/"
-languageCode = "en-us"
+```yaml
+baseUrl: /
+languageCode: en-us
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
-theme = "hello-friend"
+theme: hello-friend-blue
+copyright: 'panr/idokka'
 
-[pagination]
-  pagerSize = 5
-
-[params]
-  # dir name of your blog content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "posts"
-
+params:
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName: posts
   # OS theme is default when not provided, but you can force it to "light" or "dark"
-  defaultTheme = "dark"
-
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
-
+  defaultTheme: dark
+  # If you set this to 0, only submenu trigger will be visible
+  showMenuItems: 2
   # Show reading time in minutes for posts
-  showReadingTime = false
-
+  showReadingTime: false
   # Show table of contents at the top of your posts (defaults to false)
   # Alternatively, add this param to post front matter for specific posts
-  # toc = true
-
+  #toc: true
   # Show full page content in RSS feed items
   #(default is Description or Summary metadata in the front matter)
-  # rssFullText = true
+  #rssFullText: true
 
-[languages]
-  [languages.en]
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    writtenBy = "Written by"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+languages:
+  en:
+    title: Your site title
+    subtitle: Your site subtitle
+    keywords: ''
+    menuMore: Show more
+    writtenBy: Written by
+    readMore: Read more
+    readOtherPosts: Read other posts
+    newerPosts: Newer posts
+    olderPosts: Older posts
+    dateFormatSingle: 2006-01-02
+    dateFormatList: 2006-01-02
     # leave empty to disable, enter display text to enable
-    # lastModDisplay = ""
-
-    [languages.en.params.logo]
-      logoText = "hello friend"
-      logoHomeLink = "/"
-    # or
+    #lastModDisplay = ""
+    
+    params:
+      logo:
+        logoText: hello friend
+        logoHomeLink: /
+    #   or
     #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+    #   path: /img/your-example-logo.svg
+    #   alt: Your example logo alt text
+    
+    menu:
+      main:
+      - identifier: about
+        name: About
+        url: /about
+      - identifier: showcase
+        name: Showcase
+        url: /showcase
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
 ```
 
-to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/8f9b363e358aaa33f6d353c77feee959).
+to `config.yaml` file in your Hugo root directory and change params fields.
 
 **NOTE:** Please keep in mind that currently main menu doesn't support nesting.
 
@@ -273,17 +264,17 @@ In a post's front matter you have to add `hideReadMore` param set to `true`. Thi
 - **Extended `<head>`** — if you need to add something inside `<head>` element, after all of all of the theme's `<script>` and `<link>` tags are declared, please take a look at [`layouts/partial/extended_head.html`][extended_head.html]
 - **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at [`layouts/partial/extended_footer.html`][extended_footer.html]
 
-[archive.md]: https://github.com/panr/hugo-theme-hello-friend/blob/master/exampleSite/content/archive.md
+[archive.md]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/exampleSite/content/archive.md
 [comments.html]: https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html
-[prepended_head.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/prepended_head.html
-[extended_head.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_head.html
-[extended_footer.html]: https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_footer.html
+[prepended_head.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/prepended_head.html
+[extended_head.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/extended_head.html
+[extended_footer.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/extended_footer.html
 
 ## How to edit the theme <a id="how-to-edit" />
 
-If you are using as a remote Hugo Module (you don't have the theme files in the `theme/hello-friend`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
+If you are using as a remote Hugo Module (you don't have the theme files in the `theme/hello-friend-blue`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
 
-If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/hello-friend` and modify the files. No compilation step needed.
+If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/hello-friend-blue` and modify the files. No compilation step needed.
 
 ## Found a bug? <a id="bug" />
 
@@ -315,7 +306,7 @@ I'd be happy to know more about you and what you are doing. If you want to share
 
 ## License
 
-Copyright © 2019-2022 Radosław Kozieł 🇵🇱 ([@panr](https://twitter.com/panr))
+Copyright © 2019-2022 Radosław Kozieł 🇵🇱 ([@panr](https://twitter.com/panr))  
 Copyright © 2023-2025 Oleksii Myronenko 🇺🇦 ([@idokka](https://www.linkedin.com/in/omyronenko))
 
 The theme is released under the [MIT License][license].
