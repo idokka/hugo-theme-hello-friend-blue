@@ -1,10 +1,10 @@
 name = "hello-friend-blue"
 description = "A simple theme for Hugo. That's it."
-features = ["blog", "shortcode", "syntax Highlighting"]
+features = ["blog", "shortcode", "syntax highlighting"]
 homepage = "https://github.com/idokka/hugo-theme-hello-friend-blue"
 license = "MIT"
 licenselink = "https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/LICENSE.md"
-min_version = 0.90
+min_version = 0.147
 tags = [
   "blog",
   "clean",
@@ -24,6 +24,6 @@ tags = [
 ]
 
 [author]
-homepage = "https://radoslawkoziel.pl"
-name = "panr"
-twitter = "https://twitter.com/panr"
+homepage = "https://pimpl.dev/"
+name = "idokka"
+linkedin = "https://www.linkedin.com/in/omyronenko/"
