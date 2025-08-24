@@ -1,0 +1,40 @@
+baseUrl: /
+languageCode: en-us
+copyright: 'panr/idokka'
+# theme: hello-friend-blue
+
+params:
+  contentTypeName: posts
+  defaultTheme: dark
+  showMenuItems: 2
+  showReadingTime: false
+
+languages:
+  en:
+    title: Hello Friend
+    subtitle: A simple theme for Hugo
+    keywords: ''
+    menuMore: Show more
+    writtenBy: Written by
+    readMore: Read more
+    readOtherPosts: Read other posts
+    newerPosts: Newer posts
+    olderPosts: Older posts
+    minuteReadingTime: min read
+    dateFormatSingle: 2006-01-02
+    dateFormatList: 2006-01-02
+    lastModDisplay: Last modified
+    
+    params:
+      logo:
+        logoText: hello friend
+        logoHomeLink: /
+    
+    menu:
+      main:
+      - identifier: about
+        name: About
+        url: /about
+      - identifier: showcase
+        name: Showcase
+        url: /showcase
