@@ -1,0 +1,8 @@
+<script>
+  (function() {
+    const localTheme = window.localStorage && window.localStorage.getItem("theme");
+    const defaultTheme = localTheme || document.documentElement.className;
+    const themeClass = defaultTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark-theme" : "light-theme");
+    document.documentElement.className = themeClass;
+  })();
+</script>

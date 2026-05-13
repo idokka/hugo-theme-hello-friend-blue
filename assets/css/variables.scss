@@ -1,4 +1,4 @@
-body.light-theme, :root {
+html.light-theme {
   /* light theme color */
   --background: #fff;
   --background-secondary: #eaeaea;
@@ -13,7 +13,7 @@ body.light-theme, :root {
   --tabletWidth: (max-width: 900px);
 }
 
-body.dark-theme {
+html.dark-theme {
   /* dark theme colors */
   --background: #292a2d;
   --background-secondary: #3b3d42;
@@ -22,32 +22,10 @@ body.dark-theme {
   --color-secondary: #73747b;
   --border-color: #4a4b50;
   --color-anchor: #a9b4c8;
-}
 
-@media (prefers-color-scheme: light) {
-  body:not(.dark-theme) {
-    /* light theme color */
-    --background: #fff;
-    --background-secondary: #eaeaea;
-    --header: #fafafa;
-    --color: #222;
-    --color-secondary: #999;
-    --border-color: #dcdcdc;
-    --color-anchor: #004182;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body:not(.light-theme) {
-    /* dark theme colors */
-    --background: #292a2d;
-    --background-secondary: #3b3d42;
-    --header: #252627;
-    --color: #a9a9b3;
-    --color-secondary: #73747b;
-    --border-color: #4a4b50;
-    --color-anchor: #a9b4c8;
-  }
+  /* variables for js, must be the same as these in @custom-media queries */
+  --phoneWidth: (max-width: 684px);
+  --tabletWidth: (max-width: 900px);
 }
 
 /* MEDIA QUERIES */
