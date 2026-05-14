@@ -1,20 +1,21 @@
 ---
-title: "About"
-date: 2019-01-25
-modified: 2025-08-24
-author: "Radek, Oleksii"
+title: 'About'
+date: 2026-05-14
+author: 'dokka'
 ---
 
-# Updates 😊
+# Revision
 
 I like this theme and at the point of my [blog][blog] creation I've collected all unmerged forks and add my own changes.
+
+After a time I added my own changes and decided to rename the theme to better reflect them.
 
 Hope you will enjoy it.
 
 My personal big thanks to Radek!  
 🇺🇦 🤝 🇵🇱
 
-# Hi there
+## Hi there
 
 My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
 

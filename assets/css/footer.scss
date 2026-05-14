@@ -1,7 +1,9 @@
 .footer {
-  padding: 40px 20px;
-  flex-grow: 0;
+  padding: 20px;
+  flex-shrink: 0;
+  background: var(--footer);
   color: var(--color-secondary);
+  margin-top: auto;
 
   &__inner {
     display: flex;

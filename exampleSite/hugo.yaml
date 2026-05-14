@@ -1,6 +1,6 @@
 baseUrl: '/'
 languageCode: 'en-us'
-# theme: hello-friend-blue
+# theme: ps1
 
 params:
   contentTypeName: 'post'
@@ -10,12 +10,12 @@ params:
 
   social:
   - name: 'github'
-    url: 'https://github.com/idokka/hugo-theme-hello-friend-blue'
+    url: 'https://github.com/idokka/hugo-theme-ps1'
 
 languages:
   en:
-    title: 'Hello Friend'
-    subtitle: 'A simple theme for Hugo'
+    title: '$PS1'
+    subtitle: 'Prompt Statement'
     keywords: ''
     menuMore: 'Show more'
     writtenBy: 'Written by'
@@ -30,7 +30,7 @@ languages:
     
     params:
       logo:
-        logoText: 'hello friend'
+        logoText: '$PS1'
         logoHomeLink: '/'
     
     menu:

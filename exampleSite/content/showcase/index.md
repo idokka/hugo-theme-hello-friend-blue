@@ -1,10 +1,10 @@
 ---
-title: "Showcase"
-date: "2019-01-18"
-author: "Lorem Ipsum"
+title: 'Showcase'
+date: 2019-01-18
+author: 'Lorem Ipsum'
 resources:
-  - src: "snippet.js"
-    title: code from snippet file
+  - src: 'snippet.js'
+    title: 'code from snippet file'
     params:
       isCollapsed: true
 
