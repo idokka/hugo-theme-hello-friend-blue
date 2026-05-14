@@ -7,7 +7,6 @@ const menuMore = document.querySelector(".menu__sub-inner-more");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 const isMobileMenu = () => {
-  mobileMenuTrigger && mobileMenuTrigger.classList.toggle("hidden", !isMobile());
   menu && menu.classList.toggle("hidden", isMobile());
   menuMore && menuMore.classList.toggle("hidden", !isMobile());
 };
