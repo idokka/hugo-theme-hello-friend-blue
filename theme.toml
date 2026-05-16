@@ -1,29 +1,21 @@
-name = "hello-friend-blue"
-description = "A simple theme for Hugo. That's it."
-features = ["blog", "shortcode", "syntax highlighting"]
-homepage = "https://github.com/idokka/hugo-theme-hello-friend-blue"
+name = "$PS1"
+description = "Minimalist theme with a terminal-style identity and distraction-free reading experience."
+features = ["blog", "shortcode", "syntax highlighting", "dark-mode", "emoji"]
+homepage = "https://github.com/idokka/hugo-theme-ps1"
+demosite = "https://hugo-theme-ps1-idokkas-projects.vercel.app/"
 license = "MIT"
-licenselink = "https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/LICENSE.md"
+licenselink = "https://github.com/idokka/hugo-theme-ps1/blob/master/LICENSE.md"
 min_version = 0.147
-tags = [
-  "blog",
-  "clean",
-  "customizable",
-  "dark",
-  "highlighting",
-  "light",
-  "minimal",
-  "monochromatic",
-  "multilingual",
-  "personal",
-  "responsive",
-  "simple",
-  "technical",
-  "social",
-  "emoji",
+tags = ["blog", "clean", "customizable", "dark", "highlighting", "light", "minimal", "monochromatic",
+  "multilingual", "personal", "responsive", "simple", "technical", "social", "emoji",
 ]
 
 [author]
-homepage = "https://pimpl.dev/"
 name = "idokka"
+homepage = "https://pimpl.dev/"
 linkedin = "https://www.linkedin.com/in/omyronenko/"
+
+[original]
+name = "panr"
+homepage = "https://radoslawkoziel.pl"
+twitter = "https://twitter.com/panr"

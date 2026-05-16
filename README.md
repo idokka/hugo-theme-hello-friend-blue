@@ -1,12 +1,12 @@
-# Hello Friend (Blue version)
+# $PS1 Theme for Hugo
 
-![Hello Friend][screenshot]
+![$PS1][screenshot]
 
-### DEMO - https://hugo-theme-hello-friend-blue.vercel.app/ <a id="demo" />
+### DEMO - https://hugo-theme-ps1-idokkas-projects.vercel.app/ <a id="demo" />
 
 ---
 
-- [Hello Friend](#hello-friend)
+- [$PS1](#ps1)
   - [Features](#features)
       - [Built-in shortcodes](#built-in-shortcodes)
       - [Code highlighting](#code-highlighting)
@@ -21,7 +21,7 @@
   - [How to edit the theme](#how-to-edit)
   - [Found a bug?](#bug)
   - [New cool idea or feature](#feature)
-  - [`Hello Friend` theme user?](#hello-friend-theme-user)
+  - [`$PS1` theme user?](#ps1-theme-user)
   - [License](#license)
 
 ## Features
@@ -34,9 +34,9 @@
 #### Built-in shortcodes
 
 - **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
-  - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
+  - eg: `{{< image src="/img/hello.png" alt="$PS1" position="center" style="border-radius: 8px;" >}}`
 - **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**
-  - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
+  - eg: `{{< figure src="/img/hello.png" alt="$PS1" position="center" style="border-radius: 8px;" caption="$PS1" captionPosition="right" captionStyle="color: red;" >}}`
 - **`imgproc`** Hugo shortcode for image processing, plus additional **`position`** param [ left | center | right ] (optional).
   - eg: `{{< imgproc "img/hello.png" Resize "250x" center />}}`
   - More detailed info on processing commands at the [documentation](https://gohugo.io/content-management/image-processing/)
@@ -98,7 +98,7 @@ Some enhancements have been made to Hugo's [internal RSS][internal-rss] generati
 
 ## How to start
 
-You can download the theme manually by going to [repository][repo] and pasting it to `themes/hello-friend-blue` in your root directory.
+You can download the theme manually by going to [repository][repo] and pasting it to `themes/ps1` in your root directory.
 
 You can also choose **one of the 3 possibilities** to install the theme:
 
@@ -116,7 +116,7 @@ You can also choose **one of the 3 possibilities** to install the theme:
 # you fetch the theme module.
 #
 # hugo mod init [your website/module name]
-hugo mod get github.com/idokka/hugo-theme-hello-friend-blue.git
+hugo mod get github.com/idokka/hugo-theme-ps1.git
 ```
 
 and in your config file add:
@@ -124,9 +124,9 @@ and in your config file add:
 ```yaml
 module
   # This is needed when you fetch the theme as a submodule to your repo.
-  # replacements: 'github.com/idokka/hugo-theme-hello-friend-blue -> themes/hello-friend-blue'
+  # replacements: 'github.com/idokka/hugo-theme-ps1 -> themes/ps1'
   imports:
-    path: 'github.com/idokka/hugo-theme-hello-friend-blue.git'
+    path: 'github.com/idokka/hugo-theme-ps1.git'
 ```
 
 Keep in mind that the theme by default won't show up in the `themes` directory. This means that you are using the theme as it was on the repository at the moment you fetched it. Your local `go.sum` file keeps all the references. Read more about Hugo Modules in the [official documentation][hugo-modules].
@@ -134,33 +134,33 @@ Keep in mind that the theme by default won't show up in the `themes` directory. 
 ⚠️ If you encounter any issues with:
 
 ```bash
-Error: module "hello-friend-blue" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
+Error: module "ps1" not found; either add it as a Hugo Module or store it in "[...your custom path]/themes".: module does not exist
 ```
 
-then please try to remove `theme: 'hello-friend-blue'` from your config file.
+then please try to remove `theme: 'ps1'` from your config file.
 
 ### Install theme locally
 
 ```bash
-git clone https://github.com/idokka/hugo-theme-hello-friend-blue.git themes/hello-friend-blue
+git clone https://github.com/idokka/hugo-theme-ps1.git themes/ps1
 ```
 
-This will clone the repository directly to the `themes/hello-friend-blue` directory.
+This will clone the repository directly to the `themes/ps1` directory.
 
 ### Install theme as a submodule
 
 ```bash
-git submodule add -f https://github.com/idokka/hugo-theme-hello-friend-blue.git themes/hello-friend-blue
+git submodule add -f https://github.com/idokka/hugo-theme-ps1.git themes/ps1
 ```
 
-This will install the repository as a sumbodule in the `themes/hello-friend-blue` directory.
+This will install the repository as a sumbodule in the `themes/ps1` directory.
 
 ## How to run your site
 
 From your Hugo root directory run:
 
 ```
-hugo server -t hello-friend-blue
+hugo server -t ps1
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -174,7 +174,7 @@ baseUrl: '/'
 languageCode: 'en-us'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
-theme: 'hello-friend-blue'
+theme: 'ps1'
 # Override to place own footer string
 # copyright: 'panr/idokka'
 
@@ -204,7 +204,7 @@ params:
   # All supported icons you can find in layouts\partials\svg.html
   social:
   - name: 'github'
-    url: 'https://github.com/idokka/hugo-theme-hello-friend-blue'
+    url: 'https://github.com/idokka/hugo-theme-ps1'
 
 languages:
   en:
@@ -224,7 +224,7 @@ languages:
     
     params:
       logo:
-        logoText: 'hello friend'
+        logoText: '$PS1'
         logoHomeLink: '/'
     #   or
     #
@@ -277,24 +277,24 @@ In a post's front matter you have to add `hideReadMore` param set to `true`. Thi
 - **Extended `<head>`** — if you need to add something inside `<head>` element, after all of all of the theme's `<script>` and `<link>` tags are declared, please take a look at [`layouts/partial/extended_head.html`][extended_head.html]
 - **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at [`layouts/partial/extended_footer.html`][extended_footer.html]
 
-[archive.md]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/exampleSite/content/archive.md
-[comments.html]: https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html
-[prepended_head.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/prepended_head.html
-[extended_head.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/extended_head.html
-[extended_footer.html]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/layouts/partials/extended_footer.html
+[archive.md]: exampleSite/content/archive.md
+[comments.html]: layouts/partials/comments.html
+[prepended_head.html]: layouts/partials/prepended_head.html
+[extended_head.html]: layouts/partials/extended_head.html
+[extended_footer.html]: layouts/partials/extended_footer.html
 
 ## How to edit the theme <a id="how-to-edit" />
 
-If you are using as a remote Hugo Module (you don't have the theme files in the `theme/hello-friend-blue`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
+If you are using as a remote Hugo Module (you don't have the theme files in the `theme/ps1`) and you have to override only some of the styles, you can do this easily by adding `static/style.css` in your root directory and point things you want to change.
 
-If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/hello-friend-blue` and modify the files. No compilation step needed.
+If you have the theme files in the theme directory, then you can directly edit anything in the theme, you just have to go to `themes/ps1` and modify the files. No compilation step needed.
 
 ## Found a bug? <a id="bug" />
 
 If you spot any bugs, please use [Issue Tracker][issues] or create a new [Pull Request][pulls] to fix the issue.
 
-[issues]: https://github.com/idokka/hugo-theme-hello-friend-blue/issues
-[pulls]: https://github.com/idokka/hugo-theme-hello-friend-blue/pulls
+[issues]: https://github.com/idokka/hugo-theme-ps1/issues
+[pulls]: https://github.com/idokka/hugo-theme-ps1/pulls
 
 ## New cool idea or feature? <a id="feature" />
 
@@ -313,24 +313,22 @@ This will help keeping the theme close to its roots, and also allow anyone who w
 
 Sounds OK? Cool, let's rock! 🤘
 
-## `Hello Friend` theme user?
+## `$PS1` theme user?
 
-I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list][users]! 🤗
+I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](USERS.md)! 🤗
 
 ## License
 
 Copyright © 2019-2022 Radosław Kozieł 🇵🇱 ([@panr](https://twitter.com/panr))  
-Copyright © 2023-2025 Oleksii Myronenko 🇺🇦 ([@idokka](https://www.linkedin.com/in/omyronenko))
+Copyright © 2023-2026 Oleksii M. 🇺🇦 ([@idokka](https://www.linkedin.com/in/omyronenko))
 
-The theme is released under the [MIT License][license].
+The theme is released under the [MIT License](LICENSE.md).
 
 ---
-[screenshot]: https://raw.githubusercontent.com/idokka/hugo-theme-hello-friend-blue/refs/heads/master/images/screenshot.png
+[screenshot]: https://raw.githubusercontent.com/idokka/hugo-theme-ps1/refs/heads/master/images/screenshot.png
 [font]: https://rsms.me/inter/
 [font-about]: https://rsms.me/about/
 [prismjs-langs]: https://prismjs.com/#supported-languages
 [internal-rss]: https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/_default/rss.xml
-[repo]: https://github.com/idokka/hugo-theme-hello-friend-blue
+[repo]: https://github.com/idokka/hugo-theme-ps1
 [hugo-modules]: https://gohugo.io/hugo-modules
-[users]: https://github.com/panr/hugo-theme-hello-friend/blob/master/USERS.md
-[license]: https://github.com/idokka/hugo-theme-hello-friend-blue/blob/master/LICENSE.md
